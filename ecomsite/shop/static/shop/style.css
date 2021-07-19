@@ -1,0 +1,12 @@
+.card-text{
+    color: green;
+    font-weight: 800;
+}
+
+.card-title{
+    font-weight: 900;
+}
+
+.navbar-collapse.in {
+    display: block !important;
+}
