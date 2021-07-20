@@ -1,4 +1,4 @@
-if(!cart){    
+if (!cart) {
     var cart = {};
 
     if (localStorage.getItem("cart") != null) {
@@ -20,3 +20,6 @@ ${total}</li> `;
 $("#total").val(total);
 $("#item_list").append(totalPrice);
 $("#items").val(JSON.stringify(cart));
+$("#clear-cart").on("click", function () {
+    localStorage.removeItem("cart");
+});

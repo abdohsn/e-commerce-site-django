@@ -3,12 +3,13 @@
 {% block title %} Checkout {% endblock %}
         
         {% block content %}
-        <div class="container">
+            
             <div class="row">
                 <div class="col-md-12">
                     <ul class="list-group" id="item_list"></ul>
                 </div>
             </div>
+            
             <div class="row">
                 <div class="col-md-12">
                     <form method="POST">
@@ -86,14 +87,19 @@
                                 <input readonly="" type="text" class="form-control" id="total" name="total">
                             </div>
                         </div>
+                        
 
                         <button type="submit" class="btn btn-primary">
                             Place Order
                         </button>
                     </form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button id="clear-cart" class="btn btn-warning float-right">Clear Cart</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
     <script src="../static/js/cart-details.js"></script>
     <script src="../static/js/checkout.js"></script>
 {% endblock %}
