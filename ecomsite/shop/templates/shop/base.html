@@ -1,7 +1,8 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        {% load static %}
+        
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,62 +32,87 @@
 
         <title>{% block title %} {% endblock %}</title>
 
-        <!-- Template Main CSS File -->
-        <link href="{% static 'css/style.css' %}" rel="stylesheet" />
-
         {% block styles %} {% endblock %}
     </head>
     <body>
         <div class="container">
-
             <div class="row">
                 <div class="col-md-12">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                      <a class="navbar-brand" href="#">Navbar</a>
-                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                          <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                          </li>
-                          <li class="nav-item">
-                            <button id="cart" data-html="true" type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Cart(0)</button>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Disabled</a>
-                          </li>
-                        </ul>
-                      </div>
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarNav"
+                            aria-controls="navbarNav"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#"
+                                        >Home
+                                        <span class="sr-only"
+                                            >(current)</span
+                                        ></a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Features</a>
+                                </li>
+                                <li class="nav-item">
+                                    <button
+                                        id="cart"
+                                        data-html="true"
+                                        type="button"
+                                        class="btn btn-secondary"
+                                        data-container="body"
+                                        data-toggle="popover"
+                                        data-placement="bottom"
+                                    >
+                                        Cart(0)
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#"
+                                        >Disabled</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
                     </nav>
                 </div>
             </div>
-    
+
             <div class="row">
                 <div class="col-md-12">
                     <form class="card card-sm">
-                        <div class="card-body row no-gutters align-items-center">
+                        <div
+                            class="card-body row no-gutters align-items-center"
+                        >
                             <div class="col">
-                                <input type="search" name="item_name" placeholder="Search for products" class="form-control form-control-borderless">
+                                <input
+                                    type="search"
+                                    name="item_name"
+                                    placeholder="Search for products"
+                                    class="form-control form-control-borderless"
+                                />
                             </div>
                             <div class="col-auto">
-                                <button class="btn btn-success" type="submit">Search</button>
+                                <button class="btn btn-success" type="submit">
+                                    Search
+                                </button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
 
-                
             {% block content %} {% endblock %}
-        
         </div>
-        
-
-        
     </body>
 </html>
